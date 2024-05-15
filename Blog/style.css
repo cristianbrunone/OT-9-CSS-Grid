@@ -1,0 +1,73 @@
+/* Estilos do body */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos do header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos da seção de conteúdo */
+  .conteudo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Estilos dos artigos (posts) */
+  .post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estilos para imagens dentro de artigos (posts) */
+.post img {
+    display: block; /* Para evitar espaços indesejados abaixo das imagens */
+    max-width: 100%; /* Para garantir que a imagem não ultrapasse o tamanho do contêiner pai */
+    height: auto; /* Para manter a proporção da imagem */
+    margin: 0 auto 20px; /* Adiciona margem na parte inferior da imagem para espaçamento */
+    border-radius: 10px; /* Adiciona cantos arredondados à imagem */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave à imagem */
+  }
+  
+  /* Estilos dos títulos dos artigos */
+  .post h2 {
+    color: #333;
+  }
+  
+  /* Estilos dos links 'Leia mais' */
+  .post a {
+    color: #007bff; /* Azul para links */
+    text-decoration: none;
+  }
+  
+  .post a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+  }
+  
+  /* Estilos da barra lateral (aside) */
+  aside {
+    background-color: #eee;
+    padding: 20px;
+  }
+  
+  /* Estilos para telas menores */
+  @media (max-width: 768px) {
+    .conteudo {
+      grid-template-columns: 1fr;
+    }
+  
+    aside {
+      display: none;
+    }
+  }
+  
