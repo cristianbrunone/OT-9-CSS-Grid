@@ -1,0 +1,90 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Duas colunas: 1 parte com 1x a largura da outra */
+    gap: 20px;
+    font-family: Arial, sans-serif; /* Adicionando uma fonte padrão */
+    background-color:  #f4f4f4;
+}
+
+header {
+    grid-column: 1 / 3;
+    background-color: #2E6099;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+nav {
+    grid-column: 1;
+    background-color: #4682B4;
+    padding: 20px;
+
+}
+
+nav ul {
+    list-style-type: none; /* Removendo os pontos padrão da lista */
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none; 
+    color: #fff;
+    display: block; 
+    padding: 10px 20px; 
+    transition: background-color 0.3s ease;  
+}
+
+nav a:hover {
+    background-color: #777; 
+}
+
+.produtos {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas de produtos */
+    gap: 20px;
+}
+
+.produto {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumentando a sombra para uma aparência mais nítida */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação de hover */
+}
+
+.produto img {
+    width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+.produto:hover {
+    transform: translateY(-5px); /* Elevação no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumentando a sombra quando hover */
+}
+
+footer {
+    grid-column: 1 / 3;
+    background-color: #2E6099;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+  
+  /* Layout responsivo para telas menores */
+  @media (max-width: 768px) {
+    body {
+      grid-template-columns: 1fr; /* Uma única coluna para telas menores */
+    }
+  
+    header, nav, .produtos, footer {
+      grid-column: 1; /* Todos os elementos ocupam a mesma coluna */
+    }
+  
+    .produtos {
+      grid-template-columns: 1fr; /* Uma coluna de produtos para telas menores */
+    }
+  }
+  
